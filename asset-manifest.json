@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/website-jan23/static/css/main.ee2b767f.css",
+    "main.js": "/website-jan23/static/js/main.c8d89a1f.js",
+    "static/js/787.4fc70ae7.chunk.js": "/website-jan23/static/js/787.4fc70ae7.chunk.js",
+    "static/media/vancouverself.png": "/website-jan23/static/media/vancouverself.fc264470a5df3db2f77d.png",
+    "static/media/personalwebsite.png": "/website-jan23/static/media/personalwebsite.5cdaf3ddb77de3a8d3b0.png",
+    "static/media/studies.png": "/website-jan23/static/media/studies.ce9cab754dd7e5ead972.png",
+    "static/media/fpga.png": "/website-jan23/static/media/fpga.2b8f91c5fa9395b570fc.png",
+    "static/media/mnpDigital.png": "/website-jan23/static/media/mnpDigital.17d6a1933a96a7358d01.png",
+    "static/media/snakegame.jpeg": "/website-jan23/static/media/snakegame.99439003512e900b5a45.jpeg",
+    "static/media/soccerball.png": "/website-jan23/static/media/soccerball.b6d28e2ccb25655758e2.png",
+    "static/media/coding.png": "/website-jan23/static/media/coding.44f08998177d241384cf.png",
+    "index.html": "/website-jan23/index.html",
+    "main.ee2b767f.css.map": "/website-jan23/static/css/main.ee2b767f.css.map",
+    "main.c8d89a1f.js.map": "/website-jan23/static/js/main.c8d89a1f.js.map",
+    "787.4fc70ae7.chunk.js.map": "/website-jan23/static/js/787.4fc70ae7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee2b767f.css",
+    "static/js/main.c8d89a1f.js"
+  ]
+}
