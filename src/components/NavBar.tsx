@@ -1,99 +1,40 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import EngineeringIcon from '@mui/icons-material/Engineering';
-import Typography from '@mui/material/Typography';
+import React, { useState } from "react";
+import {NavBarContainer, LeftContainer, RightContainer, NavBarInnerContainer, NavBarExtendedContainer, NavBarLinkContainer, NavBarLink, NavBarMainLink, OpenLinksButton, NavBarLinkExtended} from '../styles/Navbar.style';
+import { Link } from "react-router-dom";
 
-import Container from '@mui/material/Container';
+const NavBar = () => {
+    const [extendNavBar, setExtendNavBar] = useState(false);
 
-import Button from '@mui/material/Button';
+    return (
+        <NavBarContainer extendNavBar = {extendNavBar}>
+            <NavBarInnerContainer>
+                <LeftContainer>
+                    <NavBarMainLink to='/'>
+                        Kiyon Farokhi
+                    </NavBarMainLink>
+                </LeftContainer>
+                <RightContainer>
+                    <NavBarLinkContainer>
+                        <NavBarLink to="/aboutme">About Me</NavBarLink>
+                        <NavBarLink to="/experience">Experience</NavBarLink>
+                        <NavBarLink to="/resume">Resume</NavBarLink>
+                    </NavBarLinkContainer>
+                    <OpenLinksButton onClick={()=>{
+                        setExtendNavBar((curr) => !curr);
+                    }}>{extendNavBar? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
+                </RightContainer>
+            </NavBarInnerContainer>
 
+           {extendNavBar &&
+                <NavBarExtendedContainer>
+                    <NavBarLinkExtended to="/aboutme">About Me</NavBarLinkExtended>
+                    <NavBarLinkExtended to="/experience">Experience</NavBarLinkExtended>
+                    <NavBarLinkExtended to="/resume">Resume</NavBarLinkExtended>
+                </NavBarExtendedContainer>
+            }
+            
+        </NavBarContainer>
+    );
+}
 
-const pages = ['About Me', 'Experience', 'Projects', 'Resume'];
-
-
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//     document.getElementsByClassName("navbar").style.fontSize = "30px";
-//   } else {
-//     document.getElementsByClassName("navbar").style.fontSize = "90px";
-//   }
-// }
-
-const ResponsiveAppBar = () => {
-
-  // window.onscroll = function() {scrollFunction()};
-
-
- 
-  
-
-  return (
-    <AppBar position="fixed" style={{backgroundColor:'black'}}>
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters>
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            Kiyon Farokhi
-          </Typography>
-
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              textAlign:'left',
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Kiyon Farokhi
-          </Typography>
-          <Box sx={{ flexGrow: 1,  display: 'flex' }}>
-
-              <Button
-                key='Resume'
-                sx={{ my: 2,  color: 'white', display: 'block' }}
-              >
-                Resume
-              </Button>
-
-              <Button
-                key='Resume'
-                href='https://youtu.be/uAZFBqJY6FA'
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Soccer Highlights
-              </Button>
-
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
-export default ResponsiveAppBar;
+export default NavBar;

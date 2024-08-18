@@ -66,8 +66,15 @@ function JobExperience() {
             MNP Digital Inc.
           </Typography>
           <Typography>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur reiciendis, dignissimos eveniet labore quasi vero ad modi est impedit odit repellat ullam! Aperiam officia praesentium asperiores sit iste ea!
-          </Typography>
+          -	Performed configurations and customizations within Microsoft Dynamics 365 for organizations including Ontario Lottery Gaming and the Office of the Child and Youth Advocate.</Typography>
+<Typography>-	Assisted in developing public-facing portals using Microsoft Power App Portals.</Typography>
+<Typography>-	Utilized Azure DevOps for task assignments, testing and issues management.</Typography>
+<Typography>-	Worked as part of a Development Team utilizing Agile SCRUM methodology, involved in Sprint Planning, Daily Scrums, Sprint Retrospectives, Sprint Reviews, and Product Backlog Refinements.</Typography>
+<Typography>-	Performed Quality Assurance testing, running manual test cases, reporting defects. </Typography>
+<Typography>-	Supported clients during User Acceptance Testing by triaging, investigating, and remediating defects.</Typography>
+
+
+          
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -91,8 +98,22 @@ function JobExperience() {
             Year Zero Studios
           </Typography>
           <Typography>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur reiciendis, dignissimos eveniet labore quasi vero ad modi est impedit odit repellat ullam! Aperiam officia praesentium asperiores sit iste ea!
-          </Typography>
+          -	Redesigned and coded user page of web project Wellify to optimize user flow and appearance.</Typography>
+<Typography>
+-	Conducted research and assisted with new business scoping efforts, resulting in 200+ new users.
+</Typography>
+
+<Typography>-	Refactored multiple web-based projects using TypeScript React, reduce 20% code redundancy. </Typography>
+<Typography>-	Implemented front-end technical solutions to meet project requirements for creation of 5 new web pages.</Typography>
+<Typography>-	Maintained 5 webpages, graphics, and online marketing material under direction of UX manager and development team.
+  </Typography>
+<Typography>-	Regularly used Material-UI’s accessible library to develop React.js applications faster and more efficiently.
+</Typography>
+
+
+
+ 
+
         </TimelineContent>
       </TimelineItem>
     </Timeline>

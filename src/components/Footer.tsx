@@ -9,6 +9,7 @@ const foot ={
     marginTop:'10px',
     top:'100%',
 } as React.CSSProperties;
+
 function Footer (){
 
     return (
