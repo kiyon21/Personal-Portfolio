@@ -1,6 +1,5 @@
 import * as React from 'react';
 import InfoCard from './InfoCard';
-import '../styles/aboutme.css';
 import cppImg from './../img/cpp_logo.png';
 import cImg from './../img/C_Logo.png';
 import cSImg from './../img/Logo_C_sharp.png';
@@ -8,25 +7,19 @@ import pythonImg from './../img/Python-logo-notext.svg.png';
 import typeScriptImg from './../img/Typescript_logo_2020.svg.png';
 import sqlImg from './../img/Sql_data_base_with_logo.png';
 import javaScriptImg from './../img/JavaScript-logo.png';
+import me from './../img/me.png'
 import { useState } from 'react';
 import { color } from '@mui/system';
+import { AboutMeContainer, BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
+import { ParagraphText, TitleText } from '../styles/Text.style';
 
 
 
 
 
-const AboutMe = () => {
+export const AboutMe = () => {
 
     const [view, setView] = useState(0);
-
-    const header = {
-        backgroundColor:'white',
-        paddingTop:'5vh',
-        alignItems:'center',
-        display:'flex',
-        flexDirection:'column',
-    
-    } as React.CSSProperties;
     
     const button = {
         border:'2px solid black',
@@ -34,6 +27,7 @@ const AboutMe = () => {
         height:'30px',
         width:'auto',
         fontWeight:'bold',
+        fontFamily:'Gill Sans',
         fontSize:'15px',
         borderRadius:'10px',
     } as React.CSSProperties;
@@ -47,6 +41,7 @@ const AboutMe = () => {
     const skillCard = {
     
         borderRadius:'12px',
+        fontFamily:'Gill Sans',
         border: '1px solid #000',
         display: 'flex',
         flexDirection:'column',
@@ -70,21 +65,7 @@ const AboutMe = () => {
     
     } as React.CSSProperties;
     
-    const boxContainer = {
-    
-        width: '50%',
-        height:'400px',
-        display:'flex',
-        padding:'10px',
-        flexFlow:'wrap',
-        justifyContent:'center',
-        flexDirection:'row',
-        borderRadius: '12px',
-        alignItems:'center',
-        marginBottom: '60px'
-    
-    
-    } as React.CSSProperties;
+
 
     const languages = [
         {
@@ -160,15 +141,19 @@ const AboutMe = () => {
 
     return (
             
-        <section style={header}>
-            <h1>Hi! I'm Kiyon Farokhi!</h1>
-            <p>I'm a 4A a student at the University of Waterloo, pursuing my Bacholer's in Applied Sciences, Computer Engineering</p>
+        <AboutMeContainer>
+
+            <TitleText>About Me.</TitleText>
+            <Intro> 
+            <Headshot src={me}></Headshot>
+            <ParagraphText style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText>
+            </Intro>
             <div>
                 <button style = {view == 0 ? buttonActive : button} onClick={() => setView(0)}>Languages</button>
                 <button style = {view == 1 ? buttonActive : button} onClick={() => setView(1)}>Tools + Tech</button>
                 <button style ={view == 2 ? buttonActive : button} onClick={() => setView(2)}>Databases</button>
             </div>
-            <div style={boxContainer}>
+            <BoxContainer>
                 {view == 0 && languages.map(language => <div style ={skillCard}>
                     <img style = {skillImg} src={language.imgUrl} alt="My Image"/>
                     <p style={skillText} >{language.title}</p>
@@ -178,10 +163,17 @@ const AboutMe = () => {
                 )}
                 {view == 2 && databases.map(databases => <div style={skillCard}>{databases.title}</div>
                 )}
-            </div>
-        </section>
+        </BoxContainer>
+        </AboutMeContainer>
         
     );
 }
 
-export default AboutMe;
+export const AboutMePage = () => {
+    return (
+        <div style={{paddingTop:"10vh",backgroundColor:"black"}}>
+            <AboutMe/>
+        </div>
+    )
+}
+

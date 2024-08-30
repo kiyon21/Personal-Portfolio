@@ -8,9 +8,10 @@ interface NavBarContainerProps  {
 export const NavBarContainer = styled.nav<NavBarContainerProps>`
     width: 100%;
     height: ${({extendNavBar}:NavBarContainerProps) => (extendNavBar ? "100vh" : "80px")};
-    background-color: black;
+    background-color: #38598b;
     display: flex;
     flex-direction: column;
+    position: fixed;
 
 `;
 
@@ -20,6 +21,10 @@ export const LeftContainer = styled.div `
     display: flex;
 
     align-items: center;
+    
+    @media (max-width: 700px) {
+      flex:60%;
+  }
 
 `;
 
@@ -47,9 +52,10 @@ export const NavBarLinkContainer = styled.div`
 export const NavBarLink = styled(Link)`
   color:white;
   font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gill Sans';
   text-decoration: none;
   margin: 10px;
+  font-size: large;
 
   @media (max-width: 700px){
     display:none;
@@ -59,10 +65,12 @@ export const NavBarLink = styled(Link)`
 export const NavBarMainLink = styled(Link)`
   color:white;
   font-size: x-large;
-  display: inline-block;
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  display: block;
+  font-family: 'Gill Sans';
   text-decoration: none;
   margin: 10px;
+
 
 `;
 
@@ -73,6 +81,7 @@ export const OpenLinksButton = styled.button`
   border: none;
   color:white;
   font-size: 45px;
+
   cursor: pointer;
 
   @media (min-width: 700px){

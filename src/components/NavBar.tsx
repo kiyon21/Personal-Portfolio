@@ -10,13 +10,14 @@ const NavBar = () => {
             <NavBarInnerContainer>
                 <LeftContainer>
                     <NavBarMainLink to='/'>
-                        Kiyon Farokhi
+                        Kiyon Farokhi.
                     </NavBarMainLink>
                 </LeftContainer>
                 <RightContainer>
                     <NavBarLinkContainer>
                         <NavBarLink to="/aboutme">About Me</NavBarLink>
                         <NavBarLink to="/experience">Experience</NavBarLink>
+                        <NavBarLink to="/projects">Projects</NavBarLink>
                         <NavBarLink to="/resume">Resume</NavBarLink>
                     </NavBarLinkContainer>
                     <OpenLinksButton onClick={()=>{
