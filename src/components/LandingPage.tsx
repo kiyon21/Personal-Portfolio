@@ -3,6 +3,7 @@ import {AboutMe} from "./AboutMe";
 import Header from "./Header";
 import { PageWrapper } from "../styles/LandingPage.style";
 import JobExperience from "./JobExperience";
+import {Experience} from "./Experiences";
 
 const LandingPage = () => {
 
@@ -10,6 +11,7 @@ const LandingPage = () => {
         <PageWrapper>
             <Header/>
             <AboutMe/>
+            <Experience/>
         </PageWrapper>
 
     );

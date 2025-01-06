@@ -1,19 +1,28 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const AboutMeContainer = styled.div `
-        background-color:white;
-        align-items:center;
-        display:flex;
-        flex-direction:column;
-`
+// export const AboutMeContainer = styled.div `
+//         background-color:white;
+//         align-items:center;
+//         display:flex;
+//         flex-direction:column;
+//         margin-top: 5;
+// `
 
 export const Intro = styled.div`
         text-align:center;
         display:flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
+        
+        @media (max-width:700){
+                flex-direction: column;
+        }
 `
+
+
+
 
 export const BoxContainer = styled.div `
         width: 50%;

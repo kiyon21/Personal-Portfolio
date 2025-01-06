@@ -10,7 +10,8 @@ import javaScriptImg from './../img/JavaScript-logo.png';
 import me from './../img/me.png'
 import { useState } from 'react';
 import { color } from '@mui/system';
-import { AboutMeContainer, BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
+import { BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
+import { SectionContainer, TitleContainer } from '../styles/Container.style';
 import { ParagraphText, TitleText } from '../styles/Text.style';
 
 
@@ -141,13 +142,17 @@ export const AboutMe = () => {
 
     return (
             
-        <AboutMeContainer>
-
-            <TitleText>About Me.</TitleText>
+        <SectionContainer>
+            <TitleContainer>
+                <TitleText>About Me.</TitleText>
+            </TitleContainer>
             <Intro> 
             <Headshot src={me}></Headshot>
             <ParagraphText style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText>
             </Intro>
+            <TitleText>
+                My Skills.
+            </TitleText>
             <div>
                 <button style = {view == 0 ? buttonActive : button} onClick={() => setView(0)}>Languages</button>
                 <button style = {view == 1 ? buttonActive : button} onClick={() => setView(1)}>Tools + Tech</button>
@@ -164,7 +169,7 @@ export const AboutMe = () => {
                 {view == 2 && databases.map(databases => <div style={skillCard}>{databases.title}</div>
                 )}
         </BoxContainer>
-        </AboutMeContainer>
+        </SectionContainer>
         
     );
 }

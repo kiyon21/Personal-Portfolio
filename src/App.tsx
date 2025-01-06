@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import {Experience, ExperiencePage } from './components/Experiences';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Routes>
       <Route path='/' Component={LandingPage}/>
       <Route path='/aboutme' Component={AboutMePage}/>
-      <Route path='/experience' />
+      <Route path='/experience' Component={ExperiencePage}/>
       </Routes>
     </Router>
 

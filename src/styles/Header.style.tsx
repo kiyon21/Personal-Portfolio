@@ -15,9 +15,7 @@ export const ContentWrapper = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    @media (max-width: 700px){
-    flex-direction:column;
-  }
+
 `
 
 export const IntroContainer = styled.div`
