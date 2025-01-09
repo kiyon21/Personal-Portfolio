@@ -60,6 +60,10 @@ export const NavBarLink = styled(Link)`
   @media (max-width: 700px){
     display:none;
   }
+
+  &:hover {
+    text-decoration:underline;
+  }
 `;
 
 export const NavBarMainLink = styled(Link)`

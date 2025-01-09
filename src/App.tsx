@@ -2,13 +2,12 @@ import React from 'react';
 import Header from './components/Header'
 import {AboutMePage} from './components/AboutMe'
 import './App.css';
-import JobExperience from './components/JobExperience';
 import Projects from './components/Projects';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import {Experience, ExperiencePage } from './components/Experiences';
+import { JobExperiencePage } from './components/JobExperienceSection';
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       <Routes>
       <Route path='/' Component={LandingPage}/>
       <Route path='/aboutme' Component={AboutMePage}/>
-      <Route path='/experience' Component={ExperiencePage}/>
+      <Route path='/experience' Component={JobExperiencePage}/>
       </Routes>
     </Router>
 

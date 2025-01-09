@@ -26,7 +26,7 @@ export const Intro = styled.div`
 
 export const BoxContainer = styled.div `
         width: 50%;
-        height:400px;
+        height:auto;
         display:flex;
         padding:10px;
         flex-flow:wrap;

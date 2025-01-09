@@ -9,10 +9,10 @@ import sqlImg from './../img/Sql_data_base_with_logo.png';
 import javaScriptImg from './../img/JavaScript-logo.png';
 import me from './../img/me.png'
 import { useState } from 'react';
-import { color } from '@mui/system';
+
 import { BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
-import { SectionContainer, TitleContainer } from '../styles/Container.style';
-import { ParagraphText, TitleText } from '../styles/Text.style';
+import { SectionContainer, SectionContainer2, TitleContainer } from '../styles/Container.style';
+import { ParagraphText2, TitleText, TitleText2 } from '../styles/Text.style';
 
 
 
@@ -23,7 +23,9 @@ export const AboutMe = () => {
     const [view, setView] = useState(0);
     
     const button = {
-        border:'2px solid black',
+        border:'2px solid #38598b',
+        backgroundColor:'white',
+        color:'#38598b',
         margin:'5px',
         height:'30px',
         width:'auto',
@@ -35,7 +37,7 @@ export const AboutMe = () => {
 
     const buttonActive = {
         ...button,
-        backgroundColor:'black', 
+        backgroundColor:'#38598b', 
         color: 'white'
     }
     
@@ -43,7 +45,8 @@ export const AboutMe = () => {
     
         borderRadius:'12px',
         fontFamily:'Gill Sans',
-        border: '1px solid #000',
+        border: '1px solid #38598b',
+        backgroundColor:'white',
         display: 'flex',
         flexDirection:'column',
         alignItems: 'center',
@@ -141,15 +144,18 @@ export const AboutMe = () => {
 
 
     return (
+            <>
             
-        <SectionContainer>
+        <SectionContainer2> 
             <TitleContainer>
-                <TitleText>About Me.</TitleText>
+                <TitleText2>About Me.</TitleText2>
             </TitleContainer>
             <Intro> 
             <Headshot src={me}></Headshot>
-            <ParagraphText style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText>
+            <ParagraphText2 style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText2>
             </Intro>
+            </SectionContainer2>
+            <SectionContainer>
             <TitleText>
                 My Skills.
             </TitleText>
@@ -158,6 +164,7 @@ export const AboutMe = () => {
                 <button style = {view == 1 ? buttonActive : button} onClick={() => setView(1)}>Tools + Tech</button>
                 <button style ={view == 2 ? buttonActive : button} onClick={() => setView(2)}>Databases</button>
             </div>
+
             <BoxContainer>
                 {view == 0 && languages.map(language => <div style ={skillCard}>
                     <img style = {skillImg} src={language.imgUrl} alt="My Image"/>
@@ -169,7 +176,9 @@ export const AboutMe = () => {
                 {view == 2 && databases.map(databases => <div style={skillCard}>{databases.title}</div>
                 )}
         </BoxContainer>
-        </SectionContainer>
+            </SectionContainer>
+            </>
+        
         
     );
 }

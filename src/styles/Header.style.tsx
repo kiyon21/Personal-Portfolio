@@ -33,13 +33,14 @@ export const NameContainer = styled.h1`
 export const IntroText = styled.h3`
     white-space: nowrap;
     font-family: 'Gill Sans';
+    color: #38598b;
     font-size: 25px;
     display: flex ;
     flex-direction: column;
 `
 
 export const LearnMore = styled.button`
-
+    
     width: max-content;
     cursor: pointer;
     border-radius: 1rem;
@@ -48,8 +49,15 @@ export const LearnMore = styled.button`
     padding-right: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    border-color: #38598b;
+    color: white;
+    background-color: #38598b;
     font-size: large;
     font-weight: bold;
     font-family: 'Gill Sans';
 
+&:hover {
+    background-color: white;
+    color: #38598b;
+}
 `
