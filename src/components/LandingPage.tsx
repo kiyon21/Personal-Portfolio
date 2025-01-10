@@ -1,4 +1,4 @@
-import React from "react";
+import {useRef} from "react";
 import {AboutMe} from "./AboutMe";
 import Header from "./Header";
 import { PageWrapper } from "../styles/LandingPage.style";
@@ -8,14 +8,16 @@ import { experiences } from "../info/Jobs";
 
 const LandingPage = () => {
 
-    
-      
+  const targetRef = useRef(null);
+
 
     return (
         <PageWrapper>
-            <Header/>
-            <AboutMe/>
-            <JobExperienceSection/>
+            <Header ref={targetRef}/>
+            <div id="info-section">
+              <AboutMe ref={targetRef}/>
+              <JobExperienceSection/>
+            </div> 
         </PageWrapper>
 
     );

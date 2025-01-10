@@ -1,5 +1,4 @@
-import * as React from 'react';
-import InfoCard from './InfoCard';
+import {forwardRef} from 'react';
 import cppImg from './../img/cpp_logo.png';
 import cImg from './../img/C_Logo.png';
 import cSImg from './../img/Logo_C_sharp.png';
@@ -7,18 +6,26 @@ import pythonImg from './../img/Python-logo-notext.svg.png';
 import typeScriptImg from './../img/Typescript_logo_2020.svg.png';
 import sqlImg from './../img/Sql_data_base_with_logo.png';
 import javaScriptImg from './../img/JavaScript-logo.png';
+import reactlogo from '../img/React.jpg'
+import nodelogo from '../img/Nodejs.png'
+import expresslogo from '../img/expressjs.jpg'
+import dotnetlogo from '../img/Netlogo.png'
 import me from './../img/me.png'
+import azurelogo from '../img/azureLogo.png'
+import mongologo from '../img/MongoDBLogo.png'
+import firebaseLogo from '../img/firebaseLogo.png'
+import postgreLogo from '../img/postgreLogo.png'
 import { useState } from 'react';
 
 import { BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
-import { SectionContainer, SectionContainer2, TitleContainer } from '../styles/Container.style';
+import { PageContainer1, SectionContainer, SectionContainer2, TitleContainer } from '../styles/Container.style';
 import { ParagraphText2, TitleText, TitleText2 } from '../styles/Text.style';
 
 
 
 
 
-export const AboutMe = () => {
+export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
 
     const [view, setView] = useState(0);
     
@@ -104,47 +111,47 @@ export const AboutMe = () => {
     const tools = [
         {
             title: 'React.js',
-            imgUrl: 'test'
+            imgUrl: reactlogo
         },
         {
             title: 'React Native',
-            imgUrl: 'test'
+            imgUrl: reactlogo
         },
         {
             title: 'Node.js',
-            imgUrl: 'test'
+            imgUrl: nodelogo
         },
         {
             title: 'Express.js',
-            imgUrl: 'test'
+            imgUrl: expresslogo
         },
         {
-            title: 'ASP.NET',
-            imgUrl: 'test'
+            title: '.NET',
+            imgUrl: dotnetlogo
         },
     ];
     const databases = [
         {
             title: 'Azure',
-            imgUrl: 'test'
+            imgUrl: azurelogo
         },
         {
             title: 'MongoDB',
-            imgUrl: 'test'
+            imgUrl: mongologo
         },
         {
             title: 'FireBase',
-            imgUrl: 'test'
+            imgUrl: firebaseLogo
         },
         {
             title: 'PostgreSQL',
-            imgUrl: 'test'
+            imgUrl: postgreLogo
         },
     ];
 
 
     return (
-            <>
+        <div ref={targetRef}>
             
         <SectionContainer2> 
             <TitleContainer>
@@ -171,23 +178,29 @@ export const AboutMe = () => {
                     <p style={skillText} >{language.title}</p>
                     </div>
                 )}
-                {view == 1 && tools.map(tools => <div style = {skillCard}>{tools.title}</div>
+                {view == 1 && tools.map(tools => <div style ={skillCard}>
+                    <img style = {skillImg} src={tools.imgUrl} alt="My Image"/>
+                    <p style={skillText} >{tools.title}</p>
+                    </div>
                 )}
-                {view == 2 && databases.map(databases => <div style={skillCard}>{databases.title}</div>
+                {view == 2 && databases.map(databases => <div style ={skillCard}>
+                    <img style = {skillImg} src={databases.imgUrl} alt="My Image"/>
+                    <p style={skillText} >{databases.title}</p>
+                    </div>
                 )}
         </BoxContainer>
             </SectionContainer>
-            </>
+            </div>
         
         
     );
 }
-
+)
 export const AboutMePage = () => {
     return (
-        <div style={{paddingTop:"10vh",backgroundColor:"black"}}>
+        <PageContainer1>
             <AboutMe/>
-        </div>
+        </PageContainer1>
     )
 }
 

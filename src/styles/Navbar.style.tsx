@@ -53,6 +53,7 @@ export const NavBarLink = styled(Link)`
   color:white;
   font-size: large;
   font-family: 'Gill Sans';
+  font-weight: bold;
   text-decoration: none;
   margin: 10px;
   font-size: large;
@@ -69,7 +70,7 @@ export const NavBarLink = styled(Link)`
 export const NavBarMainLink = styled(Link)`
   color:white;
   font-size: x-large;
-  font-weight: bold;
+  font-weight: bolder;
   display: block;
   font-family: 'Gill Sans';
   text-decoration: none;

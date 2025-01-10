@@ -40,7 +40,6 @@ export const IntroText = styled.h3`
 `
 
 export const LearnMore = styled.button`
-    
     width: max-content;
     cursor: pointer;
     border-radius: 1rem;
