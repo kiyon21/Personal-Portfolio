@@ -176,7 +176,7 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                     variant="contained"
                     color="primary"
                     startIcon={<GitHubIcon />}
-                    href="https://www.linkedin.com/in/kiyonfarokhi/"
+                    href="https://github.com/kiyon21"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ backgroundColor: "white", color:'#38598b' }}>
