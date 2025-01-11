@@ -12,6 +12,7 @@ export const NavBarContainer = styled.nav<NavBarContainerProps>`
     display: flex;
     flex-direction: column;
     position: fixed;
+    z-index: 2;
 
 `;
 

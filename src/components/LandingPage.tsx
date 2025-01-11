@@ -3,13 +3,12 @@ import {AboutMe} from "./AboutMe";
 import Header from "./Header";
 import { PageWrapper } from "../styles/LandingPage.style";
 import { JobExperienceSection } from "./JobExperienceSection";
-import { JobExperience } from "../types/JobExperience";
-import { experiences } from "../info/Jobs";
+import { Projects } from "./Projects";
+import {projects} from "../info/ProjectsData";
 
 const LandingPage = () => {
 
   const targetRef = useRef(null);
-
 
     return (
         <PageWrapper>
@@ -17,6 +16,7 @@ const LandingPage = () => {
             <div id="info-section">
               <AboutMe ref={targetRef}/>
               <JobExperienceSection/>
+              <Projects/>
             </div> 
         </PageWrapper>
 

@@ -1,51 +1,53 @@
-import * as React from 'react';
-import './project.css';
-import personalwebsite from './../img/personalwebsite.png';
-import fpga from './../img/fpga.png';
-import minesweeper from './../img/minesweeper.png';
-import snakegame from './../img/snakegame.jpeg';
+import React from "react";
+import { SectionContainer, Title, ProjectGrid, ProjectBox, ProjectButton, ProjectContent, ProjectImage, ProjectDescription, ProjectTitle } from "../styles/Projects.style";
+import { TitleText, TitleText2 } from "../styles/Text.style";
+import { PageContainer1, TitleContainer } from "../styles/Container.style";
+import {projects} from '../info/ProjectsData'
 
-function Projects() {
+interface ProjectSectionProps {
+    projects: Project[];
+  }
 
-
-    return (
-        <div className='container1'>
-            <div className='title1'>
-                <h2>Projects</h2>
-            </div>
-            <div className='projects'>
-            <div className='website'>
-                <div className='right'>
-                    <h3 className = 'title2'>Personal Website</h3>
-                    <p className = 'paragraph2'>-A completely professional personal website developed using TypeScript React, CSS, and Material UI. <br></br>
--Designed a simplistic front-end to create a dynamic UI/UX with Flexbox. 
-</p>
-
-                </div>
-
-                <img className = 'imgL' src = {personalwebsite}/>
-
-                </div>
-                <div className = 'left'>
-                    <h3 className = 'title2'>Music Player</h3>
-                    <p className = 'paragraph2'>-Configured Nios II processor on Altera Max 10 FPGA using C firmware that utilizes, push buttons, FatFS, Altera Audio Core and LCD display. <br></br>
--Implemented an Interrupt Service Routine that handles the falling edge of the clock to eliminate duplicate requests. <br></br>
--Conducted signal analysis efficiency comparisons between tight polling, and interrupts with custom IP cores and Signal Tap.
-</p>
-                </div>
-                <img className = 'imgR' src = {fpga}/>
-                <div className= 'right'>
-                    <h3 className = 'title2'>Minesweeper</h3>
-                    <p className = 'paragraph2'>-Used C++ to develop a user interactive terminal game with dynamic difficulties that can be set at runtime. <br></br>
--Utilized data structures and dynamic memory allocation to optimize spatial locality and time complexity. 
-				
-</p>
-                </div>
-                <img className = 'imgL' src = {minesweeper}/>
-            </div>
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    imageUrl: string;
+    link: string;
+  }
 
 
-        </div>
+export const Projects = () => {
+
+    return(
+        <SectionContainer>
+            <TitleContainer>
+                <TitleText2>My Projects.</TitleText2>
+
+            </TitleContainer>
+        <ProjectGrid>
+          {projects.map((project:Project) => (
+            <ProjectBox key={project.id}>
+              <ProjectImage src={project.imageUrl} alt={project.title} />
+              <ProjectContent>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectDescription>{project.description}</ProjectDescription>
+                <ProjectButton href={project.link} target="_blank" rel="noopener noreferrer">
+                  View Project
+                </ProjectButton>
+              </ProjectContent>
+            </ProjectBox>
+          ))}
+        </ProjectGrid>
+      </SectionContainer>
     );
 };
-export default Projects;
+
+export const ProjectsPage = () =>{
+
+    return(
+      <PageContainer1>
+        <Projects/>
+      </PageContainer1>  
+    );
+}

@@ -39,3 +39,25 @@ export const DescriptionList = styled.ul`
 export const DescriptionItem = styled.li`
     margin-bottom: 8px;
 `
+
+export const JobPosition = styled.h1`
+    color: #113f67;
+    font-weight: bold;
+    
+`
+
+export const TechList = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+`
+export const TechItem = styled.span`
+    display: inline-block; 
+    font-size: small;
+    color: #38598b;
+    padding: 5px 5px; 
+    margin-right: 5px;
+    border: 2px solid #38598b; 
+    border-radius: 5px; 
+    font-family: Arial, sans-serif;
+`

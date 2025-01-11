@@ -11,6 +11,7 @@ import nodelogo from '../img/Nodejs.png'
 import expresslogo from '../img/expressjs.jpg'
 import dotnetlogo from '../img/Netlogo.png'
 import me from './../img/me.png'
+import headshot from '../img/headshot.jpg'
 import azurelogo from '../img/azureLogo.png'
 import mongologo from '../img/MongoDBLogo.png'
 import firebaseLogo from '../img/firebaseLogo.png'
@@ -21,7 +22,10 @@ import { BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
 import { PageContainer1, SectionContainer, SectionContainer2, TitleContainer } from '../styles/Container.style';
 import { ParagraphText2, TitleText, TitleText2 } from '../styles/Text.style';
 
-
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Button from "@mui/material/Button";
+import { TechList } from '../styles/Experiences.style';
 
 
 
@@ -158,8 +162,31 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                 <TitleText2>About Me.</TitleText2>
             </TitleContainer>
             <Intro> 
-            <Headshot src={me}></Headshot>
+            <Headshot src={headshot}></Headshot>
+            <TechList>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    startIcon={<LinkedInIcon />}
+                    href="https://www.linkedin.com/in/kiyonfarokhi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ backgroundColor: "white", color:'#38598b', marginRight:'5%' }}>Linkedin</Button>
+                    <Button
+                    variant="contained"
+                    color="primary"
+                    startIcon={<GitHubIcon />}
+                    href="https://www.linkedin.com/in/kiyonfarokhi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ backgroundColor: "white", color:'#38598b' }}>
+                        Github
+                    </Button>
+            </TechList>
             <ParagraphText2 style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText2>
+            <ParagraphText2 style = {{width:'50%'}}>
+            I'm a Software Developer, specializing in C#, .NET, TypeScript, and React. I enjoy building scalable, user-friendly applications and tackling challenges across the development stack.
+            </ParagraphText2>
             </Intro>
             </SectionContainer2>
             <SectionContainer>

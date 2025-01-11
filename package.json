@@ -1,5 +1,6 @@
 {
-  "homepage": "http://kiyon21.github.io/Personal-Portfolio",
+  "name": "Personal-Portfolio",
+  "homepage": "https://kiyon21.github.io/Personal-Portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -14,9 +14,11 @@ export const experiences: JobExperience[] = [
       description: [
         'Developed a robust factory simulation environment to emulate production workflows and validate system performance, ensuring reliability in released software.',
         'Led the migration and optimization of the existing codebase to the latest .NET framework, enhancing application performance, security, and maintainability in the MES environment.',
+        'Resolved urgent bugs promptly to ensure swift issue resolution and maintain client satisfaction.',
+        'Created a CLI tool to simulate logins and task completion at 32 stations, streamlining testing.'
         
       ],
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+      technologies: ['C#', '.NET', 'SQL', 'Angular'],
       logo: pinpointlogo,
     },
     {
@@ -30,7 +32,7 @@ export const experiences: JobExperience[] = [
         'Developed notification settings configurations for iOS React Native Social Media App SoundsUnite',
         'Implemented autonomous grading quizzes in React web and iOS React Native apps, boosting course interactivity and user engagement'
       ],
-      technologies: ['React', 'Redux', 'JavaScript', 'SASS'],
+      technologies: ['Typescript', 'React', 'Node.js', 'React Native', 'MongoDB'],
       logo:awlogo
     },
     {
@@ -40,9 +42,11 @@ export const experiences: JobExperience[] = [
         startDate: 'May 2023',
         endDate: 'Aug 2023',
         description: [
-          'Architected and implemented resilient back-end features, incorporating Azure SQL Server for seamless database integration, meticulous data modeling, and the development of RESTful APIs using ASP.NET Web API.'
+          'Developed an ASP.NET WebForm for OICO, integrating with Azure SQL for lobbyist form data management.',
+          'Integrated Azure SQL Server with ASP.NET Web API to ensure robust data handling.',
+          'Built and deployed scalable RESTful APIs using ASP.NET Web API to enhance application functionality.'
         ],
-        technologies: ['React', 'Redux', 'JavaScript', 'SASS'],
+        technologies: ['C#', 'ASP.NET', 'Azure SQL'],
         logo:mnplogo
       },
       {
@@ -52,9 +56,11 @@ export const experiences: JobExperience[] = [
         startDate: 'Sept 2022',
         endDate: 'Dec 2022',
         description: [
-          'Orchestrated configurations and customization’s within Microsoft Dynamics 365 for esteemed organizations such as Ontario Lottery Gaming and the Office of the Child and Youth Advocate, tailoring solutions to meet their unique operational requirements.'
+          'Architected and implemented resilient back-end features with Azure SQL Server for seamless database integration.',
+          'Fixed client-reported bugs and added new pages to ASP.NET websites, improving functionality.',
+          'Worked with Microsoft Stack (ASP.NET, EF Core, C#) from the SQL DB to the UI end.'
         ],
-        technologies: ['React', 'Redux', 'JavaScript', 'SASS'],
+        technologies: ['C#', 'ASP.NET', 'Azure SQL'],
         logo:mnplogo
       }
   ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { JobExperience } from '../types/JobExperience';
 import { SectionContainer, JobEntryContainer } from '../styles/Container.style';
+import { JobPosition, TechItem, TechList } from '../styles/Experiences.style';
 
 
 interface JobEntryProps {
@@ -19,7 +20,7 @@ export const JobEntry: React.FC<JobEntryProps> = ({ experience }) => {
         />
       </div>
       <JobEntryContainer>
-        <h1 className="text-2xl font-bold">{experience.position}</h1>
+        <JobPosition>{experience.position}</JobPosition>
         <h2 className="text-xl text-gray-600 mb-1">{experience.company}</h2>
         <p className="text-sm text-gray-500 mb-3">
           {experience.startDate} - {experience.endDate}
@@ -29,13 +30,13 @@ export const JobEntry: React.FC<JobEntryProps> = ({ experience }) => {
             <li key={index} className="text-gray-700">{item}</li>
           ))}
         </ul>
-        <div className="flex flex-wrap gap-2">
+        <TechList>
           {experience.technologies.map((tech, index) => (
-            <span key={index} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-md text-sm">
+            <TechItem key={index}>
               {tech}
-            </span>
+            </TechItem>
           ))}
-        </div>
+        </TechList>
       </JobEntryContainer>
     </SectionContainer>
   );

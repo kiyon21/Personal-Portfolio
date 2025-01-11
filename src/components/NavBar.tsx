@@ -30,6 +30,7 @@ const NavBar = () => {
                 <NavBarExtendedContainer>
                     <NavBarLinkExtended to="/aboutme">About Me</NavBarLinkExtended>
                     <NavBarLinkExtended to="/experience">Experience</NavBarLinkExtended>
+                    <NavBarLinkExtended to="/projects">Projects</NavBarLinkExtended>
                     <NavBarLinkExtended to="/resume">Resume</NavBarLinkExtended>
                 </NavBarExtendedContainer>
             }

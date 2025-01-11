@@ -12,9 +12,10 @@ import { Link } from "react-router-dom";
 export const Intro = styled.div`
         text-align:center;
         display:flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 5%;
         
         @media (max-width:700){
                 flex-direction: column;
