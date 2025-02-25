@@ -34,6 +34,9 @@ export const BoxContainer = styled.div `
         justify-content:center;
         flex-direction:row;
         align-items:center;
+        @media (max-width:700px){
+                max-width: fit-content;
+        }
 
 `
 
@@ -69,6 +72,7 @@ export const SkillCard = styled.div`
     
     export const SkillText = styled.p`
         align-items:center;
+        white-space: nowrap;
     `
     export const SkillImg = styled.img`
         height:50px;

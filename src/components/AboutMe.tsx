@@ -156,8 +156,8 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                         Github
                     </Button>
             </TechList>
-            <ParagraphText2 style = {{width:'50%'}}>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText2>
-            <ParagraphText2 style = {{width:'50%'}}>
+            <ParagraphText2>I'm studying Computer Engineering at the University of Waterloo, graduating April 2025. I have previous software engineering internships with <b>PinPoint, AudioWorks and MNP.</b> </ParagraphText2>
+            <ParagraphText2>
             I'm a Software Developer, specializing in C#, .NET, TypeScript, and React. I enjoy building scalable, user-friendly applications and tackling challenges across the development stack.
             </ParagraphText2>
             </Intro>
@@ -188,7 +188,7 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                     <SkillText >{databases.title}</SkillText>
                     </SkillCard>
                 )}
-        </BoxContainer>
+            </BoxContainer>
             </SectionContainer>
             </div>
         

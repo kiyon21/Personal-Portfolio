@@ -19,4 +19,8 @@ export const ParagraphText = styled.p`
 
 export const ParagraphText2 = styled(ParagraphText)`
     color: white;
+    width: 50%;
+    @media (max-width:700px) {
+        width:80%;
+    }
 `
