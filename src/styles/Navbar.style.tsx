@@ -58,6 +58,7 @@ export const NavBarLink = styled(Link)`
   text-decoration: none;
   margin: 10px;
   font-size: large;
+  white-space: nowrap;
 
   @media (max-width: 700px){
     display:none;
@@ -76,6 +77,7 @@ export const NavBarMainLink = styled(Link)`
   font-family: 'Gill Sans';
   text-decoration: none;
   margin: 10px;
+  white-space: nowrap;
 
 
 `;

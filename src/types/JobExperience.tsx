@@ -9,4 +9,11 @@ export interface JobExperience {
     logo:string;
   }
   
-  
+export interface JobData {
+    id: number;
+    company: string;
+    position: string;
+    period: string;
+    description: string[];
+    logo:string;
+  }

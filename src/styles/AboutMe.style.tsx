@@ -26,16 +26,15 @@ export const Intro = styled.div`
 
 
 export const BoxContainer = styled.div `
-        width: 50%;
+        max-width: 50vw;
         height:auto;
         display:flex;
         padding:10px;
         flex-flow:wrap;
         justify-content:center;
         flex-direction:row;
-        border-radius: 12px;
         align-items:center;
-        margin-bottom: 60px;
+
 `
 
 export const Headshot = styled.img`
@@ -45,3 +44,33 @@ export const Headshot = styled.img`
     height: 300px;
     width: 300px;
 `
+
+export const SkillCard = styled.div`
+        border-radius: 12px;
+        font-family: 'Gill Sans';
+        border: 1px solid #38598b;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:30px 20px;
+        margin:10px;
+        width:85px;
+        height:95px;
+
+        @media (max-width:700px){
+                margin:5px;
+                padding: 25px 15px;
+                width: 70px;
+                height:70px;
+        }
+`
+    
+    export const SkillText = styled.p`
+        align-items:center;
+    `
+    export const SkillImg = styled.img`
+        height:50px;
+        max-width: 70px;
+    `

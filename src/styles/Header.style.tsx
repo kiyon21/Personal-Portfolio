@@ -6,6 +6,9 @@ export const HeaderImage = styled.img`
     object-fit: cover;
     height: 50vh;
     margin-left: 10px;
+    @media (max-width: 700px){
+    display: none;
+    }
 
 `
 
@@ -20,7 +23,10 @@ export const ContentWrapper = styled.div`
 
 export const IntroContainer = styled.div`
     margin: 30px;
-    max-width: 50vw;
+    width: 50vw;
+    @media (max-width: 700px){
+    width: 80vw;
+    }
 
 `
 

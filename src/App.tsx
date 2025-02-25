@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import { JobExperiencePage } from './components/JobExperienceSection';
+import { JobExperiencePage } from './components/JobExperience';
 import { Resume } from './components/Resume';
 import { ProjectsPage } from './components/Projects';
 

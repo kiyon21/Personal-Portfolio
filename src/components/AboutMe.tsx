@@ -18,7 +18,7 @@ import firebaseLogo from '../img/firebaseLogo.png'
 import postgreLogo from '../img/postgreLogo.png'
 import { useState } from 'react';
 
-import { BoxContainer, Headshot, Intro } from '../styles/AboutMe.style';
+import { BoxContainer, Headshot, Intro, SkillCard, SkillImg, SkillText } from '../styles/AboutMe.style';
 import { PageContainer1, SectionContainer, SectionContainer2, TitleContainer } from '../styles/Container.style';
 import { ParagraphText2, TitleText, TitleText2 } from '../styles/Text.style';
 
@@ -51,34 +51,7 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
         backgroundColor:'#38598b', 
         color: 'white'
     }
-    
-    const skillCard = {
-    
-        borderRadius:'12px',
-        fontFamily:'Gill Sans',
-        border: '1px solid #38598b',
-        backgroundColor:'white',
-        display: 'flex',
-        flexDirection:'column',
-        alignItems: 'center',
-        justifyContent:'center',
-        padding: '30px 20px',
-        fontSize:'20px',
-        margin: '10px',
-        width: '90px',
-        height: '120px',
-    
-    } as React.CSSProperties;
-    
-    const skillText = {
-        alignItems:'center',
-    } as React.CSSProperties;
-    
-    const skillImg = {
-        height:'50px',
-        maxWidth:'70px'
-    
-    } as React.CSSProperties;
+
     
 
 
@@ -200,20 +173,20 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
             </div>
 
             <BoxContainer>
-                {view == 0 && languages.map(language => <div style ={skillCard}>
-                    <img style = {skillImg} src={language.imgUrl} alt="My Image"/>
-                    <p style={skillText} >{language.title}</p>
-                    </div>
+                {view == 0 && languages.map(language => <SkillCard>
+                    <SkillImg src={language.imgUrl} alt="My Image"/>
+                    <SkillText>{language.title}</SkillText>
+                    </SkillCard>
                 )}
-                {view == 1 && tools.map(tools => <div style ={skillCard}>
-                    <img style = {skillImg} src={tools.imgUrl} alt="My Image"/>
-                    <p style={skillText} >{tools.title}</p>
-                    </div>
+                {view == 1 && tools.map(tools => <SkillCard>
+                    <SkillImg src={tools.imgUrl} alt="My Image"/>
+                    <SkillText>{tools.title}</SkillText>
+                    </SkillCard>
                 )}
-                {view == 2 && databases.map(databases => <div style ={skillCard}>
-                    <img style = {skillImg} src={databases.imgUrl} alt="My Image"/>
-                    <p style={skillText} >{databases.title}</p>
-                    </div>
+                {view == 2 && databases.map(databases => <SkillCard>
+                    <SkillImg src={databases.imgUrl} alt="My Image"/>
+                    <SkillText >{databases.title}</SkillText>
+                    </SkillCard>
                 )}
         </BoxContainer>
             </SectionContainer>
