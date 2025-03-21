@@ -2,6 +2,7 @@ import React from "react";
 import metasplit from "../img/Metasplit.png"
 import altera from "../img/Altera.jpg"
 import motive from "../img/MotiveComponents.png"
+import rtos from "../img/rtos.png"
 
 export const projects = [
 
@@ -24,6 +25,13 @@ export const projects = [
         title:"Motive - Android App",
         description:"Motive is a mobile app that connects people looking to play team sports with people hosting said sporting events. This application allows users to host their events and let people nearby be informed of what sports are being played, the specific participant details about the person, and any additional items required to participate.",
         imageUrl:motive,
-        link:"https://github.com/chrissantoss/Motive"
-    }
+        link:"https://github.com/kiyon21/Motive"
+    },
+    {
+      id: 4, 
+      title:"ARM-Based RTOS",
+      description:"Developed a pre-emptive, priority-based, multi-tasking kernel using C and ARM Assembly for an ARM SoC. Includes memory management scheme, task manipulation, scheduler logistics and test framework for the kernel, verifying its operation through extensive tests.",
+      imageUrl:rtos,
+      link:"https://github.com/kiyon21/RTOS-ARM-Based"
+  }
   ];
