@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/Personal-Portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/Personal-Portfolio/static/js/main.aaa3ee3f.js",
+    "main.js": "/Personal-Portfolio/static/js/main.c13d6a3d.js",
     "static/js/787.3a821dc6.chunk.js": "/Personal-Portfolio/static/js/787.3a821dc6.chunk.js",
-    "static/media/ResumePhoto.png": "/Personal-Portfolio/static/media/ResumePhoto.24328c096e8ab9947bf8.png",
+    "static/media/ResumePhoto.png": "/Personal-Portfolio/static/media/ResumePhoto.c4035cd2a4746ce9908e.png",
+    "static/media/5dof.png": "/Personal-Portfolio/static/media/5dof.2a16d964c1492a86d862.png",
     "static/media/azureLogo.png": "/Personal-Portfolio/static/media/azureLogo.5a694f18b0e4f276ce48.png",
     "static/media/headshot.jpg": "/Personal-Portfolio/static/media/headshot.b42e9684245cdbfaa16b.jpg",
     "static/media/swe_clipart.png": "/Personal-Portfolio/static/media/swe_clipart.a9522be5c13bfe1932b9.png",
@@ -22,16 +23,17 @@
     "static/media/PINpoint-Logo-JPEG-1.jpg": "/Personal-Portfolio/static/media/PINpoint-Logo-JPEG-1.6f006c6b9423d1dd1490.jpg",
     "static/media/expressjs.jpg": "/Personal-Portfolio/static/media/expressjs.7b49c72064b16934814a.jpg",
     "static/media/C_Logo.png": "/Personal-Portfolio/static/media/C_Logo.bbbbbabc8c191bfb99bf.png",
+    "static/media/nids.png": "/Personal-Portfolio/static/media/nids.4d1743e6e038c962322b.png",
     "static/media/React.jpg": "/Personal-Portfolio/static/media/React.96f423ef4f358044bdc3.jpg",
     "static/media/Netlogo.png": "/Personal-Portfolio/static/media/Netlogo.08d881324f1224fa3938.png",
     "static/media/JavaScript-logo.png": "/Personal-Portfolio/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
     "index.html": "/Personal-Portfolio/index.html",
     "main.e6c13ad2.css.map": "/Personal-Portfolio/static/css/main.e6c13ad2.css.map",
-    "main.aaa3ee3f.js.map": "/Personal-Portfolio/static/js/main.aaa3ee3f.js.map",
+    "main.c13d6a3d.js.map": "/Personal-Portfolio/static/js/main.c13d6a3d.js.map",
     "787.3a821dc6.chunk.js.map": "/Personal-Portfolio/static/js/787.3a821dc6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.aaa3ee3f.js"
+    "static/js/main.c13d6a3d.js"
   ]
 }
