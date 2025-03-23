@@ -3,6 +3,7 @@ import pinpointlogo from '../img/PINpoint-Logo-JPEG-1.jpg';
 import awlogo from '../img/Audioworks.jpeg';
 import mnplogo from '../img/MNPlogo.png'
 import { JobData } from '../types/JobExperience';
+import yzslogo from '../img/yzs.png';
 
 export const experiences: JobData[] = [
     {
@@ -54,5 +55,17 @@ export const experiences: JobData[] = [
           'Worked with Microsoft Stack (ASP.NET, EF Core, C#) from the SQL DB to the UI end.'
         ],
         logo:mnplogo
+      },
+      {
+        id: 4,
+        company: 'Year Zero Studios',
+        position: 'Software Developer',
+        period: 'Sept 2021 - Dec 2021',
+        description: [
+          'Developed scalable and reusable React components from architectural and Figma UI/UX designs.',
+          'Built full-stack features with TypeScript, React, and Firebase REST API, handling authentication and data persistence.',
+          'Implemented responsive UI elements with Material-UI to ensure a consistent and accessible user experience across devices.'
+        ],
+        logo:yzslogo
       }
   ];
