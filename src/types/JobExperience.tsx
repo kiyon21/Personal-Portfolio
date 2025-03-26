@@ -10,10 +10,10 @@ export interface JobExperience {
   }
   
 export interface JobData {
-    id: number;
+    id: string;
     company: string;
     position: string;
     period: string;
     description: string[];
-    logo:string;
+    logo: string;
   }

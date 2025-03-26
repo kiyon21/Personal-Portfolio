@@ -1,5 +1,5 @@
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
     JobItem, 
     JobHeader, 
@@ -16,10 +16,9 @@ import {
     LogoContainer
 } from "../styles/JobExperience.style"
 import { JobData } from "../types/JobExperience"
-import { experiences } from "../info/Jobs"
 import { PageContainer1, TitleContainer } from "../styles/Container.style"
 import { TitleText } from "../styles/Text.style"
-
+import { firebaseService } from '../services/firebase.service'
 
 const Job: React.FC<{ job: JobData }> = ({ job }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,22 +49,49 @@ const Job: React.FC<{ job: JobData }> = ({ job }) => {
 }
 
 const JobExperience: React.FC = () => {
+  const [jobs, setJobs] = useState<JobData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobsData = await firebaseService.getJobExperiences();
+        setJobs(jobsData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+        setError('Failed to load job experiences');
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <ExperienceContainer>
         <TitleContainer>
             <TitleText>Job Experience.</TitleText>
         </TitleContainer>
         <JobList>
-            {experiences.map((job) => (
-            <Job key={job.id} job={job} />
-            ))}
+            {loading ? (
+              <div>Loading...</div>
+            ) : (
+              jobs.map((job) => (
+                <Job key={job.id} job={job} />
+              ))
+            )}
         </JobList>
     </ExperienceContainer>
   )
 }
 
-export const JobExperiencePage = () =>{
-
+export const JobExperiencePage = () => {
     return(
       <PageContainer1>
         <JobExperience/>
