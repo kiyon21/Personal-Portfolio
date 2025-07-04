@@ -22,6 +22,7 @@ const db = admin.firestore();
 // Job experience data
 const jobExperiences = [
   {
+    id: 1,
     company: 'PINpoint Information Systems',
     position: 'Software Developer',
     period: 'Sept 2024 - Dec 2024',
@@ -35,6 +36,7 @@ const jobExperiences = [
     // logo: pinpointlogo,
   },
   {
+    id: 2,
     company: 'Audioworks Technologies',
     position: 'Full Stack Software Developer',
     period: 'Jan 2024 - April 2024',
@@ -46,6 +48,7 @@ const jobExperiences = [
     // logo:awlogo
   },
   {
+      id: 3,
       company: 'MNP Digital',
       position: 'Software Developer',
       period: 'May 2023 - Aug 2023',
@@ -57,6 +60,7 @@ const jobExperiences = [
       // logo:mnplogo
     },
     {
+      id: 4, 
       company: 'MNP Digital',
       position: 'Software Developer',
       period: 'Sept 2022 - Dec 2022',
@@ -68,6 +72,7 @@ const jobExperiences = [
       // logo:mnplogo
     },
     {
+      id: 5,
       company:'Year Zero Studios',
       position:'Software Developer',
       period:'Sept 2021 - Dec 2021',
@@ -125,8 +130,14 @@ async function addJobExperiences() {
   const collectionRef = db.collection("job_experience");
 
   jobExperiences.forEach((job) => {
-    const docRef = collectionRef.doc(); // Auto-generated ID
-    batch.set(docRef, job);
+    const docId = job.id.toString()
+    const docRef = collectionRef.doc(docId); // Auto-generated ID
+    batch.set(docRef, 
+      {
+        ...job,
+        sortOrder: job.id // so we query with order
+      }
+    );
   });
 
   try {
@@ -156,4 +167,4 @@ async function addProjectExperiences() {
 
 
 // Execute the function
-addProjectExperiences();
+addJobExperiences();

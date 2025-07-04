@@ -17,7 +17,7 @@ import {
 } from "../styles/JobExperience.style"
 import { JobData } from "../types/JobExperience"
 import { PageContainer1, TitleContainer } from "../styles/Container.style"
-import { TitleText } from "../styles/Text.style"
+import { ParagraphText, TitleText } from "../styles/Text.style"
 import { firebaseService } from '../services/firebase.service'
 
 const Job: React.FC<{ job: JobData }> = ({ job }) => {
@@ -77,6 +77,7 @@ const JobExperience: React.FC = () => {
     <ExperienceContainer>
         <TitleContainer>
             <TitleText>Job Experience.</TitleText>
+            <ParagraphText>Click on them to learn more!</ParagraphText>
         </TitleContainer>
         <JobList>
             {loading ? (

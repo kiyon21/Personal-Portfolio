@@ -30,5 +30,5 @@ export const JobEntryContainer = styled.div`
 `
 
 export const PageContainer1 = styled.div`
-    padding-top: 10vh;
+    padding-top: 6vh;
 `

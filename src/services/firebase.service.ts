@@ -1,4 +1,4 @@
-import { collection, getDocs, query, DocumentData } from 'firebase/firestore';
+import { collection, getDocs, query, DocumentData, orderBy } from 'firebase/firestore';
 import { db } from '../config/firebaseConfig';
 import { JobData } from '../types/JobExperience';
 import { getCompanyLogo } from '../utils/logoMapping';
@@ -15,7 +15,7 @@ class FirebaseService {
   async getJobExperiences(): Promise<JobData[]> {
     try {
       const jobsCollection = collection(db, 'job_experience');
-      const jobsQuery = query(jobsCollection);
+      const jobsQuery = query(jobsCollection, orderBy("sortOrder"));
       const querySnapshot = await getDocs(jobsQuery);
       
       if (querySnapshot.empty) {
