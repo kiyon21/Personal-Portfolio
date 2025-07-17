@@ -31,7 +31,7 @@ const Header = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
                     <ReactTyped strings={["Kiyon Farokhi."]} typeSpeed={120}/>
                 </TitleText>
                 
-                <ParagraphText>Software Engineer | Full-Stack Developer | Computer Engineering Student at the University of Waterloo | Passionate Problem Solver & Thrill Seeker</ParagraphText>
+                <ParagraphText>Software Engineer | Full-Stack Developer | University of Waterloo Computer Engineering Graduate | Passionate Problem Solver & Thrill Seeker</ParagraphText>
                 <LearnMore onClick={scrollToSection}>Learn More</LearnMore>
             </IntroContainer>
         </ContentWrapper>

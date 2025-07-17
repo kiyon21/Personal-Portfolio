@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage';
 import { JobExperiencePage } from './components/JobExperience';
 import { Resume } from './components/Resume';
 import { ProjectsPage } from './components/Projects';
+import Footer from './components/Footer';
 
 
 function App() {
