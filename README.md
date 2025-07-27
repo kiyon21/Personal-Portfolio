@@ -1,6 +1,6 @@
 # Kiyon's Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with React, TypeScript, and Firebase. View it live at [kiyon21.github.io/Personal-Portfolio](https://www.kiyonfarokhi.ca).
+A modern, responsive personal portfolio website built with React, TypeScript, and Firebase. View it live at [www.kiyonfarokhi.ca](https://www.kiyonfarokhi.ca).
 
 ## 🚀 Features
 
