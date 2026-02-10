@@ -15,8 +15,8 @@ const foot ={
 function Footer (){
 
     return (
-        <SectionContainer>
-            <h3>Kiyon Farokhi Copyright 2023</h3>
+        <SectionContainer style={{ backgroundColor: 'var(--color-main)', color: 'var(--color-text-muted)', padding: '2rem' }}>
+            <h3 style={{ margin: 0 }}>Kiyon Farokhi Copyright 2023</h3>
         </SectionContainer>
     );
 }

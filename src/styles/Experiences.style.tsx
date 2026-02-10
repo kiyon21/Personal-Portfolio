@@ -6,7 +6,7 @@ export const ExperiencesContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border-strong);
     border-radius: 8px;
 `
 export const LeftPane = styled.div`
@@ -41,9 +41,8 @@ export const DescriptionItem = styled.li`
 `
 
 export const JobPosition = styled.h1`
-    color: #113f67;
+    color: var(--color-text);
     font-weight: bold;
-    
 `
 
 export const TechList = styled.div`
@@ -54,10 +53,10 @@ export const TechList = styled.div`
 export const TechItem = styled.span`
     display: inline-block; 
     font-size: small;
-    color: #38598b;
+    color: var(--color-secondary);
     padding: 5px 5px; 
     margin-right: 5px;
-    border: 2px solid #38598b; 
+    border: 2px solid var(--color-secondary); 
     border-radius: 5px; 
     font-family: Arial, sans-serif;
 `

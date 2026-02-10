@@ -51,28 +51,32 @@ export const Headshot = styled.img`
 export const SkillCard = styled.div`
         border-radius: 12px;
         font-family: 'Gill Sans';
-        border: 1px solid #38598b;
-        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+        color: var(--color-secondary);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding:30px 20px;
-        margin:10px;
-        width:85px;
-        height:95px;
+        padding: 30px 20px;
+        margin: 10px;
+        width: 85px;
+        height: 95px;
 
         @media (max-width:700px){
-                margin:5px;
+                margin: 5px;
                 padding: 25px 15px;
                 width: 70px;
-                height:70px;
+                height: 70px;
         }
 `
     
     export const SkillText = styled.p`
-        align-items:center;
+        align-items: center;
         white-space: nowrap;
+        color: var(--color-secondary);
+        font-weight: 600;
+        margin: 0;
     `
     export const SkillImg = styled.img`
         height:50px;

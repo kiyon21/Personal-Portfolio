@@ -9,7 +9,7 @@ export const ExperienceContainer = styled.div`
 
 export const ExperienceTitle = styled.h2`
   font-size: 2rem;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
 `
 
@@ -20,7 +20,7 @@ export const JobList = styled.ul`
 
 export const JobItem = styled.li`
   margin-bottom: 1rem;
-  border: 1px solid #38598b;
+  border: 1px solid var(--color-border-strong);
   border-radius: 12px;
   overflow: hidden;
 `
@@ -30,30 +30,30 @@ export const JobHeader = styled.div<{ isOpen: boolean }>`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: ${(props) => (props.isOpen ? "#f0f0f0" : "#fff")};
+  background-color: ${(props) => (props.isOpen ? "var(--color-main-light)" : "var(--color-main-surface)")};
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-main-light);
   }
 `
 
 export const CompanyName = styled.h3`
   margin: 0;
   font-size: 1.2rem;
-  color: #333;
+  color: var(--color-text);
 `
 
 export const JobPosition = styled.p`
   margin: 0;
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text-muted);
 `
 
 export const JobPeriod = styled.span`
   font-size: 0.9rem;
-  color: #888;
+  color: var(--color-text-subtle);
 `
 
 export const JobDetails = styled.div<{ isOpen: boolean }>`
@@ -65,23 +65,23 @@ export const JobDetails = styled.div<{ isOpen: boolean }>`
 export const JobDescription = styled.ul`
   margin: 0;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-main);
 `
 
 export const DescriptionItem = styled.li`
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--color-text-muted);
 `
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.div<{ $darkBg?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80px;
   height: 80px;
   margin-right: 1rem;
-  background-color: white;
+  background-color: ${(props) => (props.$darkBg ? '#000' : 'var(--color-main-light)')};
   border-radius: 50%;
   overflow: hidden;
 `

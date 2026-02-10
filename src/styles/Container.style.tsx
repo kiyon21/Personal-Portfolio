@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.div`
-        background-color:white;
-        align-items:center;
-        display:flex;
-        flex-direction:column;
+        background-color: var(--color-main-light);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         margin-top: 5;
 `
 
 export const SectionContainer2 = styled(SectionContainer)`
-    background-color: #38598b;
+    background-color: var(--color-bg-section);
 `
 
 export const TitleContainer = styled.div`
@@ -31,4 +31,6 @@ export const JobEntryContainer = styled.div`
 
 export const PageContainer1 = styled.div`
     padding-top: 6vh;
+    background-color: var(--color-bg);
+    min-height: 100vh;
 `

@@ -18,7 +18,7 @@ export const ContentWrapper = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
+    background-color: var(--color-bg);
 `
 
 export const IntroContainer = styled.div`
@@ -39,9 +39,9 @@ export const NameContainer = styled.h1`
 export const IntroText = styled.h3`
     white-space: nowrap;
     font-family: 'Gill Sans';
-    color: #38598b;
+    color: var(--color-text);
     font-size: 25px;
-    display: flex ;
+    display: flex;
     flex-direction: column;
 `
 
@@ -54,15 +54,16 @@ export const LearnMore = styled.button`
     padding-right: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-color: #38598b;
+    border-color: var(--color-secondary);
     color: white;
-    background-color: #38598b;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
     font-size: large;
     font-weight: bold;
     font-family: 'Gill Sans';
 
-&:hover {
-    background-color: white;
-    color: #38598b;
-}
+    &:hover {
+        background: var(--color-main-light);
+        color: var(--color-text);
+        border-color: var(--color-secondary);
+    }
 `

@@ -8,7 +8,7 @@ interface NavBarContainerProps  {
 export const NavBarContainer = styled.nav<NavBarContainerProps>`
     width: 100%;
     height: ${({extendNavBar}:NavBarContainerProps) => (extendNavBar ? "100vh" : "80px")};
-    background-color: #38598b;
+    background-color: var(--color-main);
     display: flex;
     flex-direction: column;
     position: fixed;

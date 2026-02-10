@@ -27,7 +27,7 @@ const Job: React.FC<{ job: JobData }> = ({ job }) => {
     <JobItem>
       <JobHeader isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
       <div style={{ display: "flex", alignItems: "center" }}>
-          <LogoContainer>
+          <LogoContainer $darkBg={job.company === 'Easier Emails'}>
             <Logo src={job.logo} alt={`${job.company} logo`} />
           </LogoContainer>
           <div>

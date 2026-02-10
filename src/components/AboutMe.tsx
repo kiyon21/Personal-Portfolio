@@ -33,22 +33,22 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
     const [view, setView] = useState(0);
     
     const button = {
-        border:'2px solid #38598b',
-        backgroundColor:'white',
-        color:'#38598b',
-        margin:'5px',
-        height:'30px',
-        width:'auto',
-        fontWeight:'bold',
-        fontFamily:'Gill Sans',
-        fontSize:'15px',
-        borderRadius:'10px',
+        border: '2px solid var(--color-secondary)',
+        backgroundColor: 'var(--color-bg-card)',
+        color: 'var(--color-secondary)',
+        margin: '5px',
+        height: '30px',
+        width: 'auto',
+        fontWeight: 'bold',
+        fontFamily: 'Gill Sans',
+        fontSize: '15px',
+        borderRadius: '10px',
     } as React.CSSProperties;
 
     const buttonActive = {
         ...button,
-        backgroundColor:'#38598b', 
-        color: 'white'
+        backgroundColor: 'var(--color-secondary)',
+        color: 'white',
     }
 
     
@@ -143,7 +143,7 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                     href="https://www.linkedin.com/in/kiyonfarokhi/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ backgroundColor: "white", color:'#38598b', marginRight:'5%' }}>Linkedin</Button>
+                    style={{ backgroundColor: 'var(--color-bg-card)', color: 'var(--color-secondary)', marginRight: '5%' }}>Linkedin</Button>
                     <Button
                     variant="contained"
                     color="primary"
@@ -151,7 +151,7 @@ export const AboutMe = forwardRef<HTMLDivElement>((_, targetRef) => {
                     href="https://github.com/kiyon21"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ backgroundColor: "white", color:'#38598b' }}>
+                    style={{ backgroundColor: 'var(--color-bg-card)', color: 'var(--color-secondary)' }}>
                         Github
                     </Button>
             </TechList>
